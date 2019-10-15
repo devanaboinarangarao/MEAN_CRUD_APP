@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <div class="form-group">
+        <label for="user_id">Id</label>
+        <input type="text" name="id" id="user_id" [(ngModel)]="user_id" class="form-control" ngModel>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

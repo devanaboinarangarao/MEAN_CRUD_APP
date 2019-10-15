@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row" *ngFor="let user of usersData">
+    <p>Name : {{user.name}}</p>&nbsp;
+    <p>Email : {{user.email}}</p>&nbsp;
+    <p>Address : {{user.address}}</p>&nbsp;
+    <!-- <button class="btn btn-primary" (click)="refreshPage()">RefreshPage</button>&nbsp; -->
+    <button class="btn btn-secondary"   ><a [routerLink]="['/update']" [queryParams]="{user_id : user._id}">Edit</a></button>&nbsp;
+    <button class="btn btn-danger"><a [routerLink]="['/delete']" [queryParams]="{user_id : user._id}">Delete</a></button>
+
+  </div>
+</div>
